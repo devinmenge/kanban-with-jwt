@@ -1,6 +1,7 @@
 import { UserLogin } from "../interfaces/UserLogin";
 
 const login = async (userInfo: UserLogin): Promise<string> => {
+  console.log('userInfo',userInfo);
   const response = await fetch('/auth/login', {
     method: 'POST',
     headers: {
