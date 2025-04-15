@@ -12,6 +12,7 @@ const login = async (userInfo: UserLogin): Promise<string> => {
 
   if (!response.ok) {
     const errorData = await response.json();
+    console.log('errorData',errorData);
     throw new Error(errorData.message || 'Login failed');
   }
 
